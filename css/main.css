@@ -1,0 +1,117 @@
+/*
+This CSS file contains the styles for the overall website.
+Author: Thomas Gregg 2026
+*/
+
+/***General Formatting***/
+body, html {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Fira Sans', sans-serif;
+    background-color: #eff1f5;
+    color: #4c4f69;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header, footer {
+    background-color: #dce0e8;
+    padding: 12px;
+    text-align: center;
+}
+nav {
+    margin-top: 1em;
+    text-align: center;
+}
+main {
+    margin-top: 9em;
+    width: 70%;
+    margin: 0 auto;
+    line-height: 1.5;
+    flex: 1;
+}
+section {
+    margin-bottom: 4em;
+}
+
+/***Text Formatting***/
+a {
+    color: #04a5e5;
+    transition: color 250ms;
+    &:hover {color: #179299;}
+}
+h1, h2 {
+    font-family: 'Acme', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.intro-title {
+    color: #40a02b;
+    font-weight: bold;
+}
+section.about-me p {
+    text-indent: 2em;
+    margin-bottom: 1em;
+    .class-name {
+        font-variant-caps: small-caps;
+        font-style: italic;
+    }
+}
+
+/***Buttons/Misc***/
+.nav-button {
+    background-color: #ccd0da;
+    transition: background-color 250ms;
+    border-radius: 8px;
+    padding: 6px;
+    margin: 5px 5px;
+    box-shadow: 1px 2px 4px 1px #9ca0b0;
+    display: inline-block;
+    white-space: nowrap;
+    width: auto;
+    font-size: 1.2em;
+    &:not(.inactive):hover {background-color: #bcc0cc;}
+    &.inactive {font-weight: bold;}
+}
+
+/***Placement***/
+section.about-me img {
+    float: left;
+    max-height: 256px;
+    margin: 12px;
+    border-radius: 14px;
+    box-shadow: 2px 2px 6px 4px #9ca0b0;
+}
+section.photo-gallery {
+    margin-top: 20px;
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    img {
+        max-height: 128px;
+        flex: 1;
+    }
+}
+
+/***Responsive Design***/
+@media screen and (max-width: 600px) {
+    main {
+        width: 90%
+    }
+    section.about-me img {
+        float: none;
+        display: block;
+        margin: 8px auto;
+    }
+    .nav-button {
+        display: block;
+        margin: 12px auto;
+        width: 85%;
+        box-shadow: 0 2px 4px 1px #9ca0b0;
+        border-radius: 4px;
+        border-bottom: 1px solid #4c4f69;
+    }
+}

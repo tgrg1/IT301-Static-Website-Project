@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Tommy's Project Site</title>
+    </style>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Fira+Sans&family=Comic+Relief&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Contact Info</h1>
+    </header>
+    <nav>
+        <a href="." class="nav-button">Home</span>
+        <a href="about.html" class="nav-button">About</a>
+        <span class="nav-button inactive">Contact</span>
+    </nav>
+    <main>
+        <p>Hello! You've reached the contact page. To send a message, please fill out the form below&hellip;</p>
+        <section class="contact-form">
+            <p><span class="required">*</span>Required</p>
+
+            <form action="#">
+                <label for="name">Name<span class="required">*</span></label>
+                <input type="text" name="name" id="name" placeholder="Enter your name&hellip;" required />
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="your.email.here@example.com"/>
+
+                <label for="message">Message<span class="required">*</span></label>
+                <textarea name="message" id="message" placeholder="Enter a message&hellip;" rows="8" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <p>If the Submit button is grayed out, you haven't filled out the form correctly. If any input box is highlighted red, its content is invalid.</p>
+    </main>
+    <footer>
+        &copy;Thomas Gregg 2026
+    </footer>
+</body>
+</html>

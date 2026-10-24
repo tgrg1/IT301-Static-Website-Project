@@ -1,0 +1,61 @@
+/*
+This CSS file contains the styles for the contact form page.
+Author: Thomas Gregg 2026
+*/
+main > p {
+    text-align: center;
+}
+.contact-form {
+    position: relative;
+    background-color: #e6e9ef;
+    padding: 12px;
+    border-radius: 16px;
+    box-shadow: 2px 2px 4px 3px #9ca0b0;
+    > p {
+        position: absolute;
+        bottom: 0;
+        right: 16px;
+        font-size: 0.8em;
+    }
+}
+label {
+    font-size: 1.1em;
+}
+input, textarea {
+    font-family: 'Fira Sans', sans-serif;
+    background-color: #eff1f5;
+    border: 1px solid #4c4f69;
+    border-radius: 8px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 6px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    resize: vertical;
+    &:user-invalid {
+        /* Dim input box if input invalid */
+        background-color: beige;
+        border-color: #d20f39;
+        border-width: 2px;
+    }
+}
+button {
+    color: #4c4f69;
+    background-color: #eff1f5;
+    border: 1px solid #4c4f69;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: background-color 250ms;
+    &:hover {background-color: #ccd0da;}
+}
+form:invalid button {
+    /* Fade out button until form is filled out correctly */
+    background-color: #acb0be;
+    color: #ccd0da;
+    pointer-events: none;
+}
+.required {
+  color: #d20f39;
+}
